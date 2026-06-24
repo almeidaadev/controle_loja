@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Configurações sensíveis
+.env
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db   
+
+.vscode/**/* 
