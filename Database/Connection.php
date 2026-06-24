@@ -9,27 +9,26 @@
 // if ($conn->connect_error) {
 //     die("Erro de conexão: " . $conn->connect_error);
 // }
-use mysqli;
-use Exception;
-use RuntimeException;
+
 
 /**
  * Classe Connection para gerenciar a conexão com o banco de dados.
  * Implementa o padrão Singleton para garantir que apenas uma instância
  * da conexão seja criada durante o ciclo de vida da aplicação.
  */
+
 class Connection {
 
     // Definindo constantes para as credenciais do banco de dados
     private const HOST = "localhost";
     private const USER = "root";
     private const PASS = "";
-    private const DB   = "loja";
+    private const DB   = "store";
 
     public static ?self $instance = null;
     private mysqli $conn;
 
-    private function __construct() {
+    public function __construct() {
         $this->conn = new mysqli(
             self::HOST,
             self::USER,
@@ -66,6 +65,8 @@ class Connection {
     public function getConnection(): mysqli {
         if ($this->conn === null) {
             throw new Exception("Conexão não estabelecida.");
+        } else {
+            echo "conectou";
         }
 
         return $this->conn;

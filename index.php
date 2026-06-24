@@ -3,21 +3,24 @@
 
 <?php
 
-if (isset($_GET["page"])) {
-    $page = $_GET["page"];
+$page = $_GET["page"] ?? "compras";
+$path = __DIR__ . "/Pages/" . $page . ".php";
 
+if (!file_exists($path)) return "Page don't exist";
+
+if ($page) {
     switch ($page) {
         case 'compras':
-            include "Pages/Compras.php";
+            require "Pages/Compras.php";
             break;
         case 'fornecedores':
-            include "Pages/Fornecedores.php";
+            require "Pages/Fornecedores.php";
             break;
         case 'vendas':
-            include "Pages/Vendas.php";
+            require "Pages/Vendas.php";
             break;
         case 'resumo':
-            include "Pages/Resumo.php";
+            require "Pages/Resumo.php";
             break;
 
         default:
