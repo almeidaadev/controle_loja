@@ -1,10 +1,6 @@
 <?php
 require "../Database/Connection.php";
 
-$conn = new Connection;
-$conn->getInstance()->getConnection();
-
-
 if ($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["action"] === "create") {
     $nome = $_POST['nome'];
     $documento = $_POST['documento'];
