@@ -148,4 +148,4 @@ Em desenvolvimento ativo. Funcionalidades planejadas:
 
 ---
 
-> Projeto desenvolvido para fins de aprendizado e portfólio, aplicando PHP orientado a objetos, padrão Singleton, roteamento via query string e integração com MySQL.
+> Projeto desenvolvido para fins de aprendizado e portfólio, aplicando PHP orientado a objetos, roteamento via query string e integração com MySQL.
