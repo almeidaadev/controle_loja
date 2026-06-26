@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-require __DIR__ . "/../Database/Connection.php";
+require "../Database/Connection.php";
 
 $method = $_SERVER["REQUEST_METHOD"];
 
